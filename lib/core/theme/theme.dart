@@ -20,7 +20,7 @@ class AppTheme {
           filled: true,
           fillColor: Pallete.whiteColor,
           contentPadding: const EdgeInsets.all(20),
-          enabledBorder: _border(Pallete.borderColor),
+          enabledBorder: _border(Pallete.greyColor),
           focusedBorder: _border(Pallete.color1),
           errorBorder: _border(Pallete.errorColor)));
 }
