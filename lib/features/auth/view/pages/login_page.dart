@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kaya_app/core/theme/app_pallete.dart';
 import 'package:kaya_app/core/widgets/custom_field.dart';
+import 'package:kaya_app/features/auth/view/pages/forget_passowrd_page.dart';
 import 'package:kaya_app/features/auth/view/widgets/auth_button.dart';
 
 class LoginPage extends StatefulWidget {
@@ -56,7 +57,13 @@ class _LoginPageState extends State<LoginPage> {
                           Align(
                             alignment: Alignment.centerLeft,
                             child: GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) => const ForgetPassowrdPage(),
+                                  ),
+                                );
+                              },
                               child: const Text('Esqueceu a sua palavra-passe?',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
