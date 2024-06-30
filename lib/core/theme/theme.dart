@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kaya_app/core/theme/app_pallete.dart';
 
-
 class AppTheme {
   static _border(Color color) => OutlineInputBorder(
         borderSide: BorderSide(color: color, width: 1),
@@ -22,5 +21,6 @@ class AppTheme {
           contentPadding: const EdgeInsets.all(20),
           enabledBorder: _border(Pallete.greyColor),
           focusedBorder: _border(Pallete.color1),
-          errorBorder: _border(Pallete.errorColor)));
+          errorBorder: _border(Pallete.errorColor)),
+      colorScheme: ColorScheme.fromSeed(seedColor: Pallete.color1));
 }
