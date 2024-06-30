@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kaya_app/core/theme/app_pallete.dart';
 
 class CustomField extends StatelessWidget {
   final String hintText;
