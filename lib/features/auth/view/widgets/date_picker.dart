@@ -22,7 +22,7 @@ class _DatePickerState extends State<DatePicker> {
       },
       keyboardType: TextInputType.datetime,
       decoration: InputDecoration(hintText: widget.hintText),
-      controller: TextEditingController(),
+      controller: widget.controller,
       onTap: () async {
         // Prevents the keyboard from showing up
         FocusScope.of(context).requestFocus(new FocusNode());
