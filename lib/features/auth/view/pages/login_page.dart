@@ -4,6 +4,7 @@ import 'package:kaya_app/core/widgets/custom_field.dart';
 import 'package:kaya_app/features/auth/view/pages/forget_passowrd_page.dart';
 import 'package:kaya_app/features/auth/view/pages/register_page.dart';
 import 'package:kaya_app/features/auth/view/widgets/auth_button.dart';
+import 'package:kaya_app/features/home/view/pages/home_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -114,7 +115,13 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                           const SizedBox(height: 20),
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => const HomePage(),
+                                ),
+                              );
+                            },
                             child: const Text(
                               'Registar mais tarde',
                               style: TextStyle(
