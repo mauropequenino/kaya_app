@@ -14,6 +14,15 @@ class AppTheme {
           focusedBorder: _border(Pallete.color1)));
 
   static final lightThemeMode = ThemeData.light().copyWith(
+      cardTheme: CardTheme(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+            side: BorderSide(
+              color: Pallete.cardBorderColor,
+            )),
+        color: Colors.transparent,
+        shadowColor: Colors.transparent,
+      ),
       scaffoldBackgroundColor: Pallete.whiteColor,
       inputDecorationTheme: InputDecorationTheme(
           filled: true,
