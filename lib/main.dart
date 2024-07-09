@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kaya_app/core/theme/theme.dart';
 import 'package:kaya_app/features/auth/view/pages/login_page.dart';
-import 'package:kaya_app/features/auth/view/pages/success_page.dart';
+import 'package:kaya_app/features/home/view/pages/bottom_navigation.dart';
+import 'package:kaya_app/features/home/view/pages/home_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -16,7 +17,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightThemeMode,
-      home: SuccessPage(),
+      home: const LoginPage(),
     );
   }
 }

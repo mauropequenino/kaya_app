@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:kaya_app/core/theme/app_pallete.dart';
-import 'package:kaya_app/features/home/view/widgets/property_list_view.dart';
+import 'package:kaya_app/features/home/view/pages/home_page.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class BottomNavigation extends StatefulWidget {
+  const BottomNavigation({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<BottomNavigation> createState() => _BottomNavigationState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _BottomNavigationState extends State<BottomNavigation> {
   int currentPageIndex = 0;
 
   @override
@@ -41,12 +41,6 @@ class _HomePageState extends State<HomePage> {
       ),
       body: <Widget>[
         /// Home page
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-          child: Column(
-            children: [PropertyListView()],
-          ),
-        ),
       ][currentPageIndex],
     );
   }
