@@ -11,7 +11,13 @@ class PropertyListView extends StatelessWidget {
       child: ListView.builder(
         itemCount: 5,
         itemBuilder: (context, index) {
-          return PropertyItem(onTap: () {});
+          return PropertyItem(onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => const PropertyItemViewPage(),
+              ),
+            );
+          });
         },
       ),
     );
