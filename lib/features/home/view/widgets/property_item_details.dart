@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:kaya_app/core/theme/app_pallete.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 
-class PropertyItem extends StatelessWidget {
+class PropertyItemDetails extends StatelessWidget {
   final VoidCallback onTap;
-  const PropertyItem({super.key, required this.onTap});
+  const PropertyItemDetails({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
