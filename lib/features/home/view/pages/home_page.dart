@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kaya_app/core/theme/app_pallete.dart';
-import 'package:kaya_app/features/home/view/widgets/property_list_view.dart';
+import 'package:kaya_app/features/property/view/pages/property_list_view.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

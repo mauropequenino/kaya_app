@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 import 'package:kaya_app/core/theme/app_pallete.dart';
 
-class PropertyItemViewPage extends StatefulWidget {
-  const PropertyItemViewPage({super.key});
+class PropertyItemDetailsPage extends StatefulWidget {
+  const PropertyItemDetailsPage({super.key});
 
   @override
-  State<PropertyItemViewPage> createState() => _PropertyItemViewPageState();
+  State<PropertyItemDetailsPage> createState() => _PropertyItemDetailsPageState();
 }
 
-class _PropertyItemViewPageState extends State<PropertyItemViewPage> {
+class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
   @override
   @override
   Widget build(BuildContext context) {
