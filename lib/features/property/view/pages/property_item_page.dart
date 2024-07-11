@@ -5,7 +5,13 @@ import 'package:kaya_app/features/property/view/widgets/image_slideshow_widget.d
 
 class PropertyItem extends StatelessWidget {
   final VoidCallback onTap;
-  const PropertyItem({super.key, required this.onTap});
+  PropertyItem({super.key, required this.onTap});
+
+  final List<String> imageUrls = [
+    'https://images.unsplash.com/photo-1460408037948-b89a5e837b41?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1493809842364-78817add7ffb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=1560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +21,9 @@ class PropertyItem extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const ImageSlideshowWidget(),
+              ImageSlideshowWidget(
+                imageUrls: imageUrls,
+              ),
               Padding(
                 padding: const EdgeInsets.all(15),
                 child: Column(
