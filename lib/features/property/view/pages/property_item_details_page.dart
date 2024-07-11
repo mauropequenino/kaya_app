@@ -6,7 +6,8 @@ class PropertyItemDetailsPage extends StatefulWidget {
   const PropertyItemDetailsPage({super.key});
 
   @override
-  State<PropertyItemDetailsPage> createState() => _PropertyItemDetailsPageState();
+  State<PropertyItemDetailsPage> createState() =>
+      _PropertyItemDetailsPageState();
 }
 
 class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
@@ -60,8 +61,8 @@ class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text('Venda de Apartamento T2',
-                        style: TextStyle(
-                            fontSize: 24, fontWeight: FontWeight.bold)),
+                            style: TextStyle(
+                                fontSize: 24, fontWeight: FontWeight.bold)),
                         Text.rich(
                           TextSpan(
                             children: [
@@ -88,7 +89,7 @@ class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
                           style: TextStyle(color: Pallete.subtitleText)),
                     ],
                   ),
-                 const SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -122,30 +123,27 @@ class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
                   const Text('Descrição',
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                  const Text('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere convallis mi vehicula ultrices. In vel dolor nec mauris rhoncus gravida. Praesent porta elit et imperdiet pharetra. In hac habitasse platea dictumst. Curabitur euismod erat nisl, non molestie libero sagittis at. Praesent condimentum, tortor nec convallis scelerisque, neque quam mollis nulla, quis fringilla nulla nisi posuere magna. Aenean tincidunt in purus et tristique. ',
+                  const Text(
+                      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere convallis mi vehicula ultrices. In vel dolor nec mauris rhoncus gravida. Praesent porta elit et imperdiet pharetra. In hac habitasse platea dictumst. Curabitur euismod erat nisl, non molestie libero sagittis at. Praesent condimentum, tortor nec convallis scelerisque, neque quam mollis nulla, quis fringilla nulla nisi posuere magna. Aenean tincidunt in purus et tristique. ',
                       style: TextStyle(fontSize: 16, color: Colors.grey)),
                   const SizedBox(height: 20),
                   const Text('Facilidades',
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 10),
-                  const Wrap(
-                    spacing: 8.0,
-                    runSpacing: 4.0,
-                    children: [
-                      Chip(
-                        label: Text('Facilidade 1'),
-                        shape: StadiumBorder(
-                            side: BorderSide(
-                                color:  Color.fromRGBO(26, 147, 192, 1))),
-                      ),
-                      Chip(
+                  const Wrap(spacing: 8.0, runSpacing: 4.0, children: [
+                    Chip(
+                      label: Text('Facilidade 1'),
+                      shape: StadiumBorder(
+                          side: BorderSide(
+                              color: Color.fromRGBO(26, 147, 192, 1))),
+                    ),
+                    Chip(
                       label: Text('Facilidade 2'),
                       shape: StadiumBorder(
                           side: BorderSide(
-                              color:  Color.fromRGBO(26, 147, 192, 1))),
+                              color: Color.fromRGBO(26, 147, 192, 1))),
                     ),
-
                     Chip(
                       label: Text('Facilidade 3'),
                       shape: StadiumBorder(
@@ -156,51 +154,20 @@ class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
                       label: Text('Facilidade 4'),
                       shape: StadiumBorder(
                           side: BorderSide(
-                              color:  Color.fromRGBO(26, 147, 192, 1))),
+                              color: Color.fromRGBO(26, 147, 192, 1))),
                     ),
-                    ]
-                  ),
+                  ]),
                   const SizedBox(height: 20),
                   const Text('Proximidades',
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                   const SizedBox(height: 10),
-                  const Wrap(
-                    spacing: 8.0,
-                    runSpacing: 4.0,
-                    children: [
-                      Chip(
-                        label: Text('Proximidade 1'),
-                        shape: StadiumBorder(
-                            side: BorderSide(
-                                color:  Color.fromRGBO(26, 147, 192, 1))),
-                      ),
-                      Chip(
-                      label: Text('Proximidade 2'),
-                      shape: StadiumBorder(
-                          side: BorderSide(
-                              color:  Color.fromRGBO(26, 147, 192, 1))),
-                    ),
-
-                    Chip(
-                      label: Text('Proximidade 3'),
-                      shape: StadiumBorder(
-                          side: BorderSide(
-                              color: Color.fromRGBO(26, 147, 192, 1))),
-                    ),
-                    Chip(
-                      label: Text('Proximidade 4'),
-                      shape: StadiumBorder(
-                          side: BorderSide(
-                              color:  Color.fromRGBO(26, 147, 192, 1))),
-                    ),
-                    ]
-                  ),
+                  _buildWrapClip(),
                   const SizedBox(height: 20),
                   const Divider(
                       height: 2,
                       thickness: 2,
-                      color:  Color.fromARGB(255, 167, 167, 167)),
+                      color: Color.fromARGB(255, 167, 167, 167)),
                   const SizedBox(height: 10),
                   const Text.rich(
                     TextSpan(
@@ -225,8 +192,8 @@ class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
                         Expanded(
                           child: OutlinedButton.icon(
                             onPressed: () {},
-                            icon:
-                                const Icon(Icons.calendar_month, color: Colors.black),
+                            icon: const Icon(Icons.calendar_month,
+                                color: Colors.black),
                             label: const Text('Agendar visita',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w700,
@@ -239,7 +206,8 @@ class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40),
                               ),
-                              side: const BorderSide(color: Colors.black, width: 2),
+                              side: const BorderSide(
+                                  color: Colors.black, width: 2),
                             ),
                           ),
                         ),
@@ -247,7 +215,8 @@ class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
                         Expanded(
                           child: ElevatedButton.icon(
                             onPressed: () {},
-                            icon: const Icon(Icons.message, color: Colors.white),
+                            icon:
+                                const Icon(Icons.message, color: Colors.white),
                             label: const Text('Mensagem',
                                 style: TextStyle(
                                     color: Colors.white,
@@ -275,5 +244,23 @@ class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
         ),
       ),
     );
+  }
+
+  Widget _buildWrapClip() {
+    return Wrap(spacing: 8.0, runSpacing: 4.0, 
+    children: [
+      _buildClip('Proximidade 1'),  
+      _buildClip('Proximidade 2'),  
+      _buildClip('Proximidade 3'),  
+      _buildClip('Proximidade 4'),  
+    ]);
+  }
+
+  Widget _buildClip(String text) {
+    return Chip(
+        label: Text(text),
+        shape: const StadiumBorder(
+            side: BorderSide(color: Pallete.color1)),
+      );
   }
 }
