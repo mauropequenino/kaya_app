@@ -79,9 +79,9 @@ class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
                   ChipsWidget(items: proximities),
                   const SizedBox(height: 20),
                   const Divider(
-                      height: 2,
+                      height: 1,
                       thickness: 2,
-                      color: Color.fromARGB(255, 167, 167, 167)),
+                      color: Color.fromARGB(255, 238, 238, 238)),
                   const SizedBox(height: 10),
                   _buildPrice('4.500.000'),
                   const SizedBox(height: 20),
