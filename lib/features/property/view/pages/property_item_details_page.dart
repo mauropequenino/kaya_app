@@ -41,9 +41,7 @@ class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
         centerTitle: true,
         actions: [
           IconButton(
-              onPressed: () {
-                
-              },
+              onPressed: _share,
               icon: const Icon(
                 Icons.ios_share,
                 color: Pallete.blackColor,
