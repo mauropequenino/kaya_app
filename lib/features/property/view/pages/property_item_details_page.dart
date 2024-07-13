@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:kaya_app/core/theme/app_pallete.dart';
 import 'package:kaya_app/features/property/view/widgets/clip_widget.dart';
 import 'package:kaya_app/features/property/view/widgets/image_slideshow_widget.dart';
@@ -39,6 +39,16 @@ class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
       appBar: AppBar(
         title: _buildSectionTitle('Imóvel'),
         centerTitle: true,
+        actions: [
+          IconButton(
+              onPressed: () {
+                
+              },
+              icon: const Icon(
+                Icons.ios_share,
+                color: Pallete.blackColor,
+              ))
+        ],
       ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -103,6 +113,12 @@ class _PropertyItemDetailsPageState extends State<PropertyItemDetailsPage> {
         ),
       ),
     );
+  }
+
+  Future<void>_share() async {
+    await Share.share(
+        'Não perca está oportunidade, vejá este imóvel agora. https://play.google.com/store/search?q=pub%3ADivTag&c=apps',
+        subject: 'Kaya App');
   }
 
   Widget _buildSectionTitle(String text) {
