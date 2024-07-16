@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kaya_app/core/theme/theme.dart';
 import 'package:kaya_app/features/auth/view/pages/login_page.dart';
-import 'package:kaya_app/features/home/view/pages/home_page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

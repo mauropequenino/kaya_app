@@ -29,10 +29,29 @@ class _RegisterPageState extends State<RegisterPage> {
 
   final _formKey = GlobalKey<FormState>();
   int _currentStep = 0;
+  
+  @override
+  void dispose() {
+    _disposeControllers();
+    super.dispose();
+  }
+
+  void _disposeControllers() {
+    _firstNameController.dispose();
+    _lastNameController.dispose();
+    _genreController.dispose();
+    _birthDateController.dispose();
+    _nationalityController.dispose();
+    _identificationDocTypeController.dispose();
+    _identicationDocNumberController.dispose();
+    _phoneNumberController.dispose();
+    _emailController.dispose();
+    _passwordController.dispose();
+  }
 
   final List<String> _gender = [
-    'Feminino',
     'Masculino',
+    'Feminino',
   ];
 
   final List<String> _identificationDocType = [
@@ -67,7 +86,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
+                    const Padding(
                         padding: const EdgeInsets.only(left: 25),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
