@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kaya_app/core/theme/app_pallete.dart';
+import 'package:kaya_app/features/home/view/pages/filter_page.dart';
+import 'package:kaya_app/features/home/view/widgets/filter_dialog_widget.dart';
 import 'package:kaya_app/features/property/view/pages/property_list_view.dart';
 
 class HomePage extends StatefulWidget {
@@ -41,13 +43,13 @@ class _HomePageState extends State<HomePage> {
       ),
       body: <Widget>[
         /// Home page
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        const Padding(
+          padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           child: Column(
-            
             children: [PropertyListView()],
           ),
         ),
+        FilterPage(),
       ][currentPageIndex],
     );
   }
