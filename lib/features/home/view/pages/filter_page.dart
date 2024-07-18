@@ -26,11 +26,11 @@ class _FilterPageState extends State<FilterPage> {
           return FilterDialogWidget(
               province: viewModel.province,
               type: viewModel.type,
-              priceRange: viewModel.priceRange,
-              onFilter: (String selectedProvince, String selectedType,
-                  RangeValues priceRange) {
+              minPrice: viewModel.minPrice,
+              maxPrice: viewModel.maxPrice,
+              onFilter: (String selectedProvince, String selectedType, int minPrice, int maxPrice) {
                 viewModel.setFilters(
-                    selectedProvince, selectedType, priceRange);
+                    selectedProvince, selectedType, minPrice, maxPrice);
               });
         });
   }
